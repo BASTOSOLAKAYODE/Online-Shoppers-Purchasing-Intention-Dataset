@@ -24,9 +24,8 @@ As a data analyst, the goal is to extract insights from user behavior data and p
 - Identify high-value customer segments for targeted marketing strategies.
 
 ### Data Source and Tools
-- The SQL queries used to inspect and clean the data for this analysis can be found here: [SQL Cleaning Queries](#)
-- Targeted SQL queries regarding various business questions can be found here: [Business Queries](#)
-- An interactive Tableau dashboard used to report and explore sales trends can be found here: [Tableau Dashboard](#)
+- The raw dataset can be found [here](data/raw) while the cleaned dataset used used for the analysis task [here](data/cleaned). More info about the origin of the data is available [here](https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset)
+- Notebook: The notebooks containing preprocessing, EDA and model training process for this case study can be found: [here](notebook/)
 
 # Data Structure & Initial Checks
 
