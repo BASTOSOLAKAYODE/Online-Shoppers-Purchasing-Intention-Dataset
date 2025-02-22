@@ -138,7 +138,7 @@ This analysis explores key factors influencing online purchasing behavior. Three
 3. **Product-related page duration (0.15 correlation) is almost as significant as visit frequency**, reinforcing the importance of keeping users engaged with detailed product information.
 4. **Special Day impact is minimal (-0.08 correlation),** suggesting that promotions tied to specific dates have a limited effect on revenue.
 <p align="center">
-    <img src="reports/figures/Correlation heatmap.png" alt="Red Wine" width="80%">
+    <img src="reports/figures/Correlation of Page Interactions with Revenue.png" alt="Red Wine" width="80%">
 </p>
 
 
