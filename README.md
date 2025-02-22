@@ -149,7 +149,7 @@ This analysis explores key factors influencing online purchasing behavior. Three
 4. **Reducing friction points (e.g., cart abandonment) can increase conversion rates** by improving Page Values and lowering exits.
 
 <p align="center">
-    <img src="reports/figures/Correlation heatmap.png" alt="Red Wine" width="80%">
+    <img src="reports/figures/Correlations of Exit Rates Bounce Rates and Page Value.png" alt="Red Wine" width="80%">
 </p>
 
 

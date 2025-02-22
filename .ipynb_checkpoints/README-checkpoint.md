@@ -77,7 +77,7 @@ The dataset contains behavioral metrics related to website visits, including:
 
 - **Total Rows**: 12,330 records
 - **Duplicates**: Removed duplicate rows.
-- **Missing Values**: Handled missing values appropriately.
+- **Missing Values**: The dataset have no missing values.
 - **Class Imbalance**: Revenue class is imbalanced (15.63% purchases vs. 84.37% no purchase). Applied resampling techniques to balance the classes.
 
 ## Data Processing Summary
@@ -138,7 +138,7 @@ This analysis explores key factors influencing online purchasing behavior. Three
 3. **Product-related page duration (0.15 correlation) is almost as significant as visit frequency**, reinforcing the importance of keeping users engaged with detailed product information.
 4. **Special Day impact is minimal (-0.08 correlation),** suggesting that promotions tied to specific dates have a limited effect on revenue.
 <p align="center">
-    <img src="reports/figures/Correlation heatmap.png" alt="Red Wine" width="80%">
+    <img src="reports/figures/Correlation of Page Interactions with Revenue.png" alt="Red Wine" width="80%">
 </p>
 
 
@@ -149,20 +149,11 @@ This analysis explores key factors influencing online purchasing behavior. Three
 4. **Reducing friction points (e.g., cart abandonment) can increase conversion rates** by improving Page Values and lowering exits.
 
 <p align="center">
-    <img src="reports/figures/Correlation heatmap.png" alt="Red Wine" width="80%">
+    <img src="reports/figures/Correlations of Exit Rates Bounce Rates and Page Value.png" alt="Red Wine" width="80%">
 </p>
 
-#### **Category 3: Feature Importance for Purchases**
-1. **Page Value dominates as the most important feature** (~0.27 score), reinforcing that transaction-focused pages drive revenue.
-2. **Product Page Interaction is the second most crucial factor (~0.26 score),** suggesting that a seamless product browsing experience enhances conversions.
-3. **Exit Rates have a notable influence (~0.05 score),** showing that minimizing user drop-offs improves sales.
-4. **Administrative and Informational pages rank lower in importance,** emphasizing the need to prioritize product-related content.
 
-<p align="center">
-    <img src="reports/figures/Feature Importance.png" alt="Red Wine" width="80%">
-</p>
-
-#### **Category 4: Traffic and Seasonal Trends**
+#### **Category 3: Traffic and Seasonal Trends**
 1. **Traffic Type influences purchases, with TrafficType_2 ranking among the top 10 factors**, indicating that certain sources are more effective for conversions.
 2. **November sees higher conversions than other months**, supporting seasonal trends in shopping behavior.
 3. **Weekend visits show a minor effect on purchases**, implying that weekday traffic is equally important.
@@ -170,6 +161,15 @@ This analysis explores key factors influencing online purchasing behavior. Three
 
 <p align="center">
     <img src="reports/figures/Feature Importance.png" alt="Red Wine" width="80%">
+</p>
+
+#### **Category 4: Customer Segmentation**  
+1. **Traffic sources significantly impact conversions**, with **TrafficType_2 ranking among the top 10 most important features**. This suggests that certain marketing channels are more effective in driving purchases.  
+2. **Regional differences in purchasing behavior exist**, though they have a lower impact compared to traffic type and visitor type. This suggests that while location-based targeting may help, other factors play a bigger role.  
+3. **Weekday vs. weekend traffic shows minimal variation in conversions**, implying that marketing efforts should be consistent throughout the week rather than heavily focused on weekends.  
+
+<p align="center">  
+    <img src="reports/figures/Feature Importance.png" alt="Feature Importance" width="80%">  
 </p>
 
 ### **Recommendations:**
