@@ -127,6 +127,10 @@ This analysis explores key factors influencing online purchasing behavior. Three
 2. **Exit and Bounce Rates negatively correlate with revenue**, suggesting that reducing premature exits improves sales.
 3. **Product-related page interactions play a crucial role in driving purchases**, with their duration and frequency contributing positively to revenue.
 
+   - The python code utilised to inspect these relationships can be found [here](notebooks/)
+   - The prediction model can be downloaded [here](model/random_forest_model.pkl/)
+   - A one-page PowerPoint executive summary is available for download [here](Reports/executive-summary.pptx)
+
 ---
 
 ### **Insights Deep Dive**
