@@ -25,7 +25,7 @@ As a data analyst, the goal is to extract insights from user behavior data and p
 
 ### Data Source and Tools
 - The raw dataset can be found [here](data/raw) while the cleaned dataset used used for the analysis task [here](data/cleaned). More info about the origin of the data is available [here](https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset)
-- Notebook: The notebooks containing preprocessing, EDA and model training process for this case study can be found: [here](notebook/)
+- Notebook: The notebooks containing preprocessing, EDA and model training process for this case study can be found: [here](notebooks)
 
 # Data Structure & Initial Checks
 
