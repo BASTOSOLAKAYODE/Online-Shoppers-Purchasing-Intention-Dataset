@@ -119,21 +119,28 @@ Ecommerce-Purchase-Prediction/
 
 ```
 
-### **Executive Summary**
+## **Executive Summary**
 
 **Overview of Findings**
 This analysis explores key factors influencing online purchasing behavior. Three primary insights emerge:
 1. **Page Value is the strongest predictor of purchases**, indicating that pages designed for transactions significantly impact conversion rates.
 2. **Exit and Bounce Rates negatively correlate with revenue**, suggesting that reducing premature exits improves sales.
 3. **Product-related page interactions play a crucial role in driving purchases**, with their duration and frequency contributing positively to revenue.
+4. **Three distinct visitor segments emerge from clustering analysis:**
+    - High-Intent Buyers **(Cluster 2)**: Users with long sessions and high PageValues, indicating a strong likelihood of purchase.
+    - Casual Browsers **(Cluster 1)**: Users who spend a low amount of time on the site and exhibit high bounce rates, suggesting interest but hesitation.
+    - Impulse Visitors **(Cluster 0)**: Users with moderate time spent and moderate exit rates, likely navigating away without deep engagement.
 
-   - The python code utilised to inspect these relationships can be found [here](notebooks/)
+<p align="center">
+    <img src="reports/figures/Dashboard 1.png" alt="Red Wine" width="90%">
+</p>
+
+- The python code utilised to inspect these relationships can be found [here](notebooks/)
    - The prediction model can be downloaded [here](model/random_forest_model.pkl/)
    - A one-page PowerPoint executive summary is available for download [here](reports/executive-summary.pptx)
-
 ---
 
-### **Insights Deep Dive**
+## **Insights Deep Dive**
 
 #### **Category 1: User Engagement**
 1. **Product-Related Page Interactions are highly correlated with revenue** (correlation: 0.16). Users who engage longer with product-related pages are more likely to make a purchase.
