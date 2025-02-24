@@ -26,12 +26,13 @@ As a data analyst, the goal is to extract insights from user behavior data and p
 ### Data Source and Tools
 - The raw dataset can be found [here](data/raw) while the cleaned dataset used used for the analysis task [here](data/cleaned). More info about the origin of the data is available [here](https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset)
 - Notebook: The notebooks containing preprocessing, EDA and model training process for this case study can be found: [here](notebooks)
+-  Tableau Dashboard: The interactive dashboard showcasing customer segmentation insights, including conversion rates, traffic sources, bounce and exit rates, and session durations, can be accessed: [here](https://public.tableau.com/views/CutomersSegmentation/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link).
 
-# Data Structure & Initial Checks
+## Data Structure & Initial Checks
 
 The main dataset used for this project consists of user browsing behavior on an e-commerce platform, aiming to predict purchasing behavior. The dataset contains various numerical and categorical features, including session details, page visit metrics, user attributes, and transaction indicators.
 
-## Dataset Overview
+### Dataset Overview
 
 **Table: Online Shopping Behavior Data**
 
@@ -49,7 +50,7 @@ The dataset contains behavioral metrics related to website visits, including:
 - **Weekend**: Whether the session occurred on a weekend.
 - **Revenue (Target Variable)**: Whether the session resulted in a purchase.
 
-## Dataset Schema
+### Dataset Schema
 
 | Feature                  | Data Type   | Description |
 |--------------------------|------------|-------------|
@@ -79,14 +80,14 @@ The dataset contains behavioral metrics related to website visits, including:
 - **Missing Values**: The dataset have no missing values.
 - **Class Imbalance**: Revenue class is imbalanced (15.63% purchases vs. 84.37% no purchase). Applied resampling techniques to balance the classes.
 
-## Data Processing Summary
+### Data Processing Summary
 - **Feature Engineering**: Created interaction features, aggregated session behavior.
 - **Categorical Encoding**: One-hot encoded categorical variables.
 - **Outlier Handling**: Applied log transformation to numerical features with extreme outliers.
 - **Feature Importance**: Used tree-based methods to identify key predictors.
 - **Model Selection**: Trained a Random Forest Classifier for prediction.
 
-# Repository Structure
+## Repository Structure
 
 ```
 Ecommerce-Purchase-Prediction/
@@ -99,7 +100,7 @@ Ecommerce-Purchase-Prediction/
 ├── notebooks/
 │   ├── 01_preprocessing.ipynb     # Exploratory Data Analysis
 │   ├── 02_eda.ipynb    # Data cleaning and feature engineering
-│
+│   ├── 03_clustering.ipynb    # Tableau interactive dashboard 
 │
 ├── model/
 │   ├── random_forest_model.pkl # Saved machine learning model
@@ -126,6 +127,11 @@ This analysis explores key factors influencing online purchasing behavior. Three
 1. **Page Value is the strongest predictor of purchases**, indicating that pages designed for transactions significantly impact conversion rates.
 2. **Exit and Bounce Rates negatively correlate with revenue**, suggesting that reducing premature exits improves sales.
 3. **Product-related page interactions play a crucial role in driving purchases**, with their duration and frequency contributing positively to revenue.
+
+   <p align="center">
+    <img src="reports/figures/Feature Importance.png" alt="Red Wine" width="90%">
+</p>
+
 4. **Three distinct visitor segments emerge from clustering analysis:**
     - High-Intent Buyers **(Cluster 2)**: Users with long sessions and high PageValues, indicating a strong likelihood of purchase.
     - Casual Browsers **(Cluster 1)**: Users who spend a low amount of time on the site and exhibit high bounce rates, suggesting interest but hesitation.
@@ -138,6 +144,7 @@ This analysis explores key factors influencing online purchasing behavior. Three
 - The python code utilised to inspect these relationships can be found [here](notebooks/)
    - The prediction model can be downloaded [here](model/random_forest_model.pkl/)
    - A one-page PowerPoint executive summary is available for download [here](reports/executive-summary.pptx)
+   -  An interactive dashboard of the customers segmentation is avaliable [here](https://public.tableau.com/views/CutomersSegmentation/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 ---
 
 ## **Insights Deep Dive**
@@ -173,16 +180,18 @@ This analysis explores key factors influencing online purchasing behavior. Three
     <img src="reports/figures/Feature Importance.png" alt="Red Wine" width="80%">
 </p>
 
-#### **Category 4: Customer Segmentation**  
-1. **Traffic sources significantly impact conversions**, with **TrafficType_2 ranking among the top 10 most important features**. This suggests that certain marketing channels are more effective in driving purchases.  
-2. **Regional differences in purchasing behavior exist**, though they have a lower impact compared to traffic type and visitor type. This suggests that while location-based targeting may help, other factors play a bigger role.  
-3. **Weekday vs. weekend traffic shows minimal variation in conversions**, implying that marketing efforts should be consistent throughout the week rather than heavily focused on weekends.  
+### Category 4: Customer Segmentation  
 
-<p align="center">  
-    <img src="reports/figures/Feature Importance.png" alt="Feature Importance" width="80%">  
+- **Traffic sources play a crucial role in conversions**, with certain traffic types driving significantly higher purchase rates. This aligns with **TrafficType_2** being among the top 10 important features, highlighting the impact of marketing channels.  
+- **Regional differences in purchasing behavior are evident**, but they have a lower influence compared to traffic type and visitor type. This suggests that while location-based targeting may help, optimizing traffic sources and visitor engagement is more impactful.  
+- **Bounce and exit rates vary across customer clusters**, with **high-intent buyers** showing lower exit rates and longer session durations. This reinforces the importance of optimizing site experience for engagement.  
+- **Weekday vs. weekend traffic shows minimal variation in conversions**, indicating that marketing efforts should remain **consistent throughout the week** rather than being heavily weighted toward weekends. 
+
+<p align="center">
+    <img src="reports/figures/Dashboard 1.png" alt="Red Wine" width="90%">
 </p>
 
-### **Recommendations:**
+## **Recommendations:**
 Based on the insights and findings above, we recommend the **website design and marketing teams** to consider the following actions:
 
 1. **Enhance Product Page Engagement:**
@@ -207,7 +216,7 @@ Based on the insights and findings above, we recommend the **website design and 
 
 ---
 
-### **Assumptions and Caveats:**
+## **Assumptions and Caveats:**
 Throughout the analysis, multiple assumptions were made to manage challenges with the data. These assumptions and caveats are noted below:
 
 1. **Data Completeness:** It is assumed that all recorded sessions represent valid user interactions, and missing data did not significantly impact the insights.
